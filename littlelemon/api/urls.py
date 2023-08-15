@@ -3,7 +3,7 @@ from django.urls import path
 from . import views
 
 
-app_name = 'LittleLemonAPI'
+app_name = 'api'
 urlpatterns = [
     path('menu-items', views.MenuItemView.as_view(), name='menu'),
     path('menu-items/<int:pk>', views.SingleMenuItemView.as_view(), name='menu-detail'),
