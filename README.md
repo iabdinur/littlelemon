@@ -81,7 +81,7 @@ use http://127.0.0.1:8000/auth/token/logout/ to logout with the token in the hea
 
 Testing
 python manage.py test
-GRANT ALL PRIVILEGES ON `test_littlelemon`.* TO 'django'@'localhost';
+GRANT ALL PRIVILEGES ON `test_littlelemon`.* TO 'admin'@'localhost';
 FLUSH PRIVILEGES;
 To execute the available unittests, please open the Visual Studio terminal and enter the following command: python manage.py test tests/. Please ensure that you have activated the virtual environment and navigated into the 'littlelemon' directory prior to running the unit-tests command.
 
