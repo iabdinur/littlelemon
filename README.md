@@ -6,10 +6,8 @@ This is a capstone project for the Meta Back-End Development course
 virtualenv venv
 source venv/bin/activate
 
-# Pip install frameworks
-
-pip3 install django
-pip3 install djangorestframework
+# Pip install requirement file
+pip3 install -r requirements.txt
 # create a django project
 django-admin startproject littlelemon
 # run development server
