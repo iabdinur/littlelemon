@@ -30,30 +30,36 @@ GET in http://localhost:8000/api/menu/1
 
 {
     "id": 1,
-    "title": "Menu 1",
-    "price": "123.00",
-    "inventory": 4
+    "title": "Pizza",
+    "price": "15.00",
+    "inventory": 100
 }
+
 GET in http://localhost:8000/api/menu
 
 Get all menus
 POST http://localhost:8000/api/menu/
 
-BODY
-
-{
-    "title": "Menu 2",
-    "price": "123.00",
-    "inventory": 3
-}
-RESULT
-
-{
-    "id": 2,
-    "title": "Menu 2",
-    "price": "123.00",
-    "inventory": 3
-}
+[
+    {
+        "id": 1,
+        "title": "Pizza",
+        "price": "15.00",
+        "inventory": 100
+    },
+    {
+        "id": 2,
+        "title": "Pasta",
+        "price": "20.00",
+        "inventory": 50
+    },
+    {
+        "id": 3,
+        "title": "Carrot Cake",
+        "price": "10.00",
+        "inventory": 30
+    }
+]
 
 GET in http://localhost:8000/api/booking/tables
 
@@ -61,22 +67,23 @@ GET in http://localhost:8000/api/booking/tables
     {
         "id": 1,
         "name": "Booking 1",
-        "number_of_guests": 6,
-        "booking_date": "2023-06-06T17:41:53Z"
+        "number_of_guests": 2,
+        "booking_date": "2023-08-17T20:45:00Z"
     }
 ]
+
 POST http://localhost:8000/api/api-token-auth/
 
 {
-    "token": "a9d223579062329a541eb8eb8206c52c8b15c974"
+    "token": "22846dabc22e55f086a19169d26c5f62c801f1cc"
 }
 Add authorization to the endpoints, so you have to send a header in the request with the Authorization title: Token [VALUE]
 
 pip install djoser
 navigate to http://127.0.0.1:8000/auth/token/login/ to get the token
 
-user: "super  
-password: "123"
+user: "admin" 
+password: "lemon@789!"
 use http://127.0.0.1:8000/auth/token/logout/ to logout with the token in the header
 
 Testing
