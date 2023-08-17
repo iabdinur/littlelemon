@@ -1,10 +1,15 @@
 Meta Backend Capstone
+
 This is a capstone project for the Meta Back-End Development course
 
-Commands
+# Virtual Enviornment Commands
 virtualenv venv
 source venv/bin/activate
+
+# Pip install frameworks
+
 pip3 install django
+pip3 install djangorestframework
 # create a django project
 django-admin startproject littlelemon
 # run development server
@@ -12,20 +17,23 @@ cd littlelemon
 python3 manage.py runserver
 # create a django app 
 python3 manage.py startapp restaurant
-# install client
+# Pip install SQL Database
 pip3 install mysqlclient
-create database littlelemon;
 
+# Creating the Database
+create database littlelemon;
 use littlelemon;
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'lemon@789!';
 GRANT ALL PRIVILEGES ON littlelemon.* TO 'admin'@'localhost';
 python3 manage.py migrate 
 python3 manage.py makemigrations
+
+# Create admin superuser
 python manage.py createsuperuser
 #username: admin
 #email: admin@littlelemon.com
 #password: lemon@789!
-pip3 install djangorestframework
+
 
 GET in http://localhost:8000/api/menu/1
 
