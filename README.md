@@ -9,21 +9,22 @@ pip3 install django
 django-admin startproject littlelemon
 # run development server
 cd littlelemon
-python manage.py runserver
+python3 manage.py runserver
 # create a django app 
-python manage.py startapp restaurant
+python3 manage.py startapp restaurant
 # install client
 pip3 install mysqlclient
 create database littlelemon;
+
 use littlelemon;
-CREATE USER 'django'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON littlelemon.* TO 'django'@'localhost';
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'lemon@789!';
+GRANT ALL PRIVILEGES ON littlelemon.* TO 'admin'@'localhost';
 python3 manage.py migrate 
 python3 manage.py makemigrations
 python manage.py createsuperuser
-#user:super
-#email: super@gmail.com
-#password: 123
+#username: admin
+#email: admin@littlelemon.com
+#password: lemon@789!
 pip3 install djangorestframework
 
 GET in http://localhost:8000/api/menu/1
